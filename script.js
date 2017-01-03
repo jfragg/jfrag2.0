@@ -3,23 +3,28 @@ $(document).ready(function(){
     $(".card").hide();
     $(".terminal")
 
-    var intro = "Hello, I am A.V.A.";
-    var intro2 = "I will be here to assist you today. </br>"; 
     var scenario = 0;
-    text = [intro, intro2];
 
-    $("#terminal-text").typed({
-        strings: [intro, intro2],
-        typeSpeed: 0,
-        callback: function () {
-            $(".typed-cursor").remove();
-            $("p").removeClass("active");
-            let newEle = "<p> A.V.A: $ </p> <span class='active'></span>";
-            $(".terminal-content").append(newEle);
-            scenario++;
-            SceneOne();
-        }
-    });
+    SceneZero();
+
+    function SceneZero(){
+        let intro = "Hello, I am A.V.A.";
+        let intro2 = "I will be here to assist you today. </br>"; 
+
+        $("#terminal-text").typed({
+            strings: [intro, intro2],
+            typeSpeed: 50,
+            callback: function () {
+                setTimeout(500);
+                $(".typed-cursor").remove();
+                $("p").removeClass("active");
+                let newEle = "<p> A.V.A: $ </p> <span class='active'></span>";
+                $(".terminal-content").append(newEle);
+                scenario++;
+                SceneOne();
+            }
+        });
+    }
 
     function SceneOne(){
         let line1 = "I've done some digging...";
@@ -29,8 +34,9 @@ $(document).ready(function(){
 
         $(".active").typed({
             strings: [line1, line2],
-            typeSpeed: 0,
+            typeSpeed: 50,
             callback: function() {
+                setTimeout(500);
                 $("span").removeClass("active")
                 $(".typed-cursor").remove();
                 let newEle = "</br> <p> A.V.A: $ </p> <span class='active'></span>";
@@ -46,8 +52,9 @@ $(document).ready(function(){
 
         $(".active").typed({
             strings: [line1],
-            typeSpeed: 0,
+            typeSpeed: 50,
             callback: function() {
+                setTimeout(500);
                 $("span").removeClass("active");
                 MakeRoom();
             }
