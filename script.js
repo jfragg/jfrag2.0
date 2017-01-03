@@ -1,7 +1,13 @@
 $(document).ready(function(){
 
     $(".card").hide();
-    $(".terminal")
+    $(".full-file").hide();
+    $(".passcode").hide();
+    $("#unlock-site").hide();
+    $("#welcome-en").hide();
+    $("#welcome-fr").hide();
+    $("#welcome-ma").hide();
+    $(".welcome").hide();
 
     var scenario = 0;
     var cont = false;
@@ -63,17 +69,19 @@ $(document).ready(function(){
     }
 
     function SceneTwoFiller(){
-        let line1 = "Shall we continue? (y/n) ";
+        setTimeout(function(){
+            let line1 = "Shall we continue? (y/n) ";
         
-        $(".active").typed({
-            strings: [line1],
-            typeSpeed: 50,
-            callback: function(){
-                $(".typed-cursor").remove();
-                let newEle = "<input type='text' id='continue-input'> </input>";
-                $(".active").after(newEle);
-            }
-        });
+            $(".active").typed({
+                strings: [line1],
+                typeSpeed: 50,
+                callback: function(){
+                    $(".typed-cursor").remove();
+                    let newEle = "<input type='text' id='continue-input'> </input>";
+                    $(".active").after(newEle);
+                }
+            });
+        }, 1500);
     }
 
     function SceneThree(){
@@ -83,8 +91,14 @@ $(document).ready(function(){
             strings: [line1],
             typeSpeed: 50, 
             callback: function() {
-                ReadyScene();
-                SceneThreeFiller();
+                setTimeout(function(){
+                    ReadyScene();
+                    SceneThreeFiller();
+                }, 500);
+
+                setTimeout(function(){
+                    SceneFour();
+                }, 7000)
             }
         });
     }
@@ -102,6 +116,65 @@ $(document).ready(function(){
         });
     }
 
+    function SceneFour(){
+        let line1 = "Oh no...";
+        let line2 = "It seems like we've run out of time!";
+
+        $(".active").typed({
+            strings: [line1, line2],
+            typeSpeed: 50, 
+            callback: function() {
+                setTimeout(function(){
+                    SceneFive();
+                }, 500);
+            }
+        });
+    }
+
+    function SceneFive(){
+        let line1 = "I've given you access to the rest.";
+
+        $(".active").typed({
+            strings: [line1],
+            typeSpeed: 50, 
+            callback: function() {
+                setTimeout(function(){
+                    $(".passcode").fadeIn("fast");
+                    SceneSix();
+                }, 500);
+            }
+        });
+    }
+
+    function SceneSix(){
+        let line1 = "You must hur...";
+
+        $(".active").typed({
+            strings: [line1],
+            typeSpeed: 50,
+            callback: function (){
+                KillTerminal();
+                setTimeout(function(){
+                    $(".terminal").fadeOut("slow");
+                }, 2500);
+
+                setTimeout(function(){
+                    $("#unlock-site").fadeIn("slow");
+                }, 3000);
+            }
+        });
+    }
+
+    function KillTerminal(){
+
+        setTimeout(function(){
+            $("span").removeClass("active")
+            $(".typed-cursor").remove();
+            let newEle = "</br> <p> SUCCESS: The process with PID 47120 has been terminated. </p>";
+            $(".terminal-content").append(newEle);
+        }, 50);
+    }
+
     function MakeRoom(){
         $(".terminal").delay(100).animate({
             right: '300px'
@@ -111,12 +184,8 @@ $(document).ready(function(){
     }
 
     function CleanUpJSON(){
-
         $(".card").delay(250).fadeOut("slow");
-        $(".terminal").delay(500).animate({
-            left: '20px'
-        }, "slow");
-
+        $(".full-file").delay(750).fadeIn("slow");
     }
 
     
@@ -138,5 +207,42 @@ $(document).ready(function(){
             }
         }
     });
+
+    $(".unlock").keypress(function(e){
+        let val = $(".unlock").val();
+
+        if(val === '98241') {
+            $("#unlock-site").fadeOut("slow");
+            $(".passcode").fadeOut("slow");
+            $(".full-file").fadeOut("slow");
+
+            setTimeout(function(){
+                ShowWelcome();
+            }, 500);
+        }
+
+    });
+
+    function ShowWelcome(){
+        $(".welcome").show();
+        setTimeout(function(){
+            $("#welcome-en").fadeIn(1000);
+        }, 500);
+        setTimeout(function(){
+            $("#welcome-en").fadeOut(1000);
+        }, 1500);
+        setTimeout(function(){
+            $("#welcome-fr").fadeIn(1000);
+        }, 2500);
+        setTimeout(function(){
+            $("#welcome-fr").fadeOut(1000);
+        }, 3500);
+        setTimeout(function(){
+            $("#welcome-ma").fadeIn(1000);
+        }, 4500);
+        setTimeout(function(){
+            $("#welcome-ma").fadeOut(1000);
+        }, 5500);
+    }
 
 });

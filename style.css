@@ -77,6 +77,44 @@ body {
     z-index: -5;
 }
 
+.full-file {
+    background-color: white;
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    top: 40px;
+    right: 20%;
+    border-radius: 2%;
+    box-shadow: 0px 0px 50px #233237;
+    z-index: -5;
+}
+
+.file {
+    min-height: 100%;
+}
+
+#fakejson p {
+    font-size: 2px;
+    color: black;
+    position: relative;
+    line-height: 2px;
+    right: initial;
+}
+
+.full-file p{
+    font-size: 10px;
+    color: white;
+    position: relative;
+    line-height: 2px; 
+    right: 6px;
+}
+
+#fakejson {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .card table tr {
     line-height: 0px;
 }
@@ -119,7 +157,7 @@ body {
     /*e1e6ef*/
 }
 
-input[type=text] {
+input[type=text]#continue-input {
     background-color: transparent;
     border: none;
     /* border-bottom: 1px solid #9e9e9e; */
@@ -134,10 +172,45 @@ input[type=text] {
     box-sizing: content-box;
 }
 
-input:focus {
+input#continue-input:focus {
     border-bottom: 0px solid #000 !important;
     box-shadow: 0 0px 0 0 #000 !important;
     outline: none !important;
+}
+
+input[type=password]#unlock-site {
+    background-color: transparent;
+    border: 4px solid black;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 20%;
+    font-size: 12px;
+    box-shadow: none;
+    box-sizing: content-box;
+}
+
+input.unlock:focus {
+    border: 2px solid #233237 !important;
+    box-shadow: 0 0px 0 0 #233237 !important;
+    outline: none !important;
+}
+
+.input-field input:focus + label {
+    color: #233237 !important;
+}
+
+.material-icons {
+    color: white;
+}
+
+.material-icons.prefix.active {
+    color: #233237;
+}
+
+.input-field {
+    margin: auto;
+    position: relative;
 }
 
 .typed-cursor{
@@ -145,6 +218,29 @@ input:focus {
     -webkit-animation: blink 1.2s infinite;
     -moz-animation: blink 1.2s infinite;
     animation: blink 1.2s infinite;
+}
+
+.passcode {
+    background-color: black;
+    width: 110px;
+    height: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 17%;
+    border-radius: 2%;
+    box-shadow: 0px 0px 50px #233237;
+    z-index: -5;
+    text-align: center;
+}
+
+.passcode p {
+    font-size: 10px;
+    margin: auto;
+}
+
+.welcome {
+    margin: auto;
+    position: relative;
 }
 
 @keyframes blink{
