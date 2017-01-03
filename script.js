@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    $(".card").hide();
+    $(".terminal")
+
     var intro = "Hello, I am A.V.A.";
     var intro2 = "I will be here to assist you today. </br>"; 
     var scenario = 0;
@@ -54,48 +57,9 @@ $(document).ready(function(){
     function MakeRoom(){
         $(".terminal").delay(100).animate({
             right: '300px'
-        }, "slow");
-    }
-
-
-    function FormatJSON(details) {
-        let tab = "<span class='tab'> </span>"
-        let bigtab = "<span class='bigtab'> </span>"
-        let finalString = ""
-        for(let i = 0; i < details.length; i++){
-
-            if(i == 0){
-                details[i] += "<br/>";
-            } else if(details[i] === 'education": {' || details[i] === '"contact-info": {') {
-                for(let j = 0; j < 3; j++){
-                    details[i + j] += "<br/> &emsp; &emsp;";
-                }
-            } else  {
-                details[i] += "<br/> &emsp;";
-            }
-
-            finalString += details[i];
-        }
-
-        return finalString;
+        }, "slow", function() {
+            $(".card").delay(250).fadeIn("slow");
+        });
     }
 
 });
-
-
-
-        /*let _details = ["{", 
-        '"name": "Jonathan Fragakis",', 
-        '"location": "Toronto, Ontario",',
-        '"age": "20",',
-        '"education": {',
-        '"school": "University of Western Ontario",',
-        '"major": "Software Engineering",',
-        '"year": "Class of 2018",',
-        '}',
-        '"contact-info": {',
-        '"email": "jonathan.fragakis@gmail.com",',
-        '"linkedin": "https://www.linkedin.com/in/jfragg",',
-        '"github": "https://github.com/jfragg"',
-        '}',
-        '}']*/
