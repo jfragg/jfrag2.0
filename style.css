@@ -243,6 +243,13 @@ input.unlock:focus {
     position: relative;
 }
 
+.skip {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+}
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }

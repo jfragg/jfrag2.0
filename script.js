@@ -11,8 +11,23 @@ $(document).ready(function(){
 
     var scenario = 0;
     var cont = false;
+    var skip = false; 
 
     SceneZero();
+
+    function SkipIntro(){
+        skip = true;
+        $(".terminal").fadeOut(500);
+        $(".full-file").fadeOut(500);
+        $(".card").fadeOut(500);
+        $(".passcode").fadeOut(500);
+        $(".skip").fadeOut(500);
+        ShowWelcome();
+    }
+
+    $(".skip").click(function(){
+        SkipIntro();
+    });
 
     function SceneZero(){
         let intro = "Hello, I am A.V.A.";
@@ -215,6 +230,7 @@ $(document).ready(function(){
             $("#unlock-site").fadeOut("slow");
             $(".passcode").fadeOut("slow");
             $(".full-file").fadeOut("slow");
+            $(".skip").fadeOut("slow");
 
             setTimeout(function(){
                 ShowWelcome();
