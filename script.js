@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("#welcome-ma").hide();
     $(".welcome").hide();
     $(".main-container").hide();
-    $(".navbar").hide();
+    $(".nav-container").hide();
 
     var scenario = 0;
     var cont = false;
@@ -21,14 +21,19 @@ $(document).ready(function(){
 
     function SkipIntro(){
         skip = true;
-        $(".terminal").fadeOut(500);
-        $(".full-file").fadeOut(500);
-        $(".card").fadeOut(500);
-        $(".passcode").fadeOut(500);
-        $(".skip").fadeOut(500);
-        ShowWelcome();
+        //$(".terminal").fadeOut(500);
+        $(".terminal").hide();
+        //$(".full-file").fadeOut(500);
+        $(".full-file").hide();
+        //$(".card").fadeOut(500);
         $(".card").hide();
+        //$(".passcode").fadeOut(500);
+        $(".passcode").hide();
+        //$(".skip").fadeOut(500);
+        $(".skip").hide();
+        ShowWelcome();
     }
+    
 
     $(".skip").click(function(){
         SkipIntro();
@@ -38,54 +43,60 @@ $(document).ready(function(){
         let intro = "Hello, I am A.V.A.";
         let intro2 = "I will be here to assist you today. </br>"; 
 
-        $("#terminal-text").typed({
-            strings: [intro, intro2],
-            typeSpeed: 50,
-            callback: function () {
-                setTimeout(function(){
-                    $(".typed-cursor").remove();
-                    $("p").removeClass("active");
-                    let newEle = "<p> A.V.A: $ </p> <span class='active'></span>";
-                    $(".terminal-content").append(newEle);
-                    scenario++;
-                    SceneOne();
-                }, 500);
-            }
-        });
+        if(!skip){
+            $("#terminal-text").typed({
+                strings: [intro, intro2],
+                typeSpeed: 50,
+                callback: function () {
+                    setTimeout(function(){
+                        $(".typed-cursor").remove();
+                        $("p").removeClass("active");
+                        let newEle = "<p> A.V.A: $ </p> <span class='active'></span>";
+                        $(".terminal-content").append(newEle);
+                        scenario++;
+                        SceneOne();
+                    }, 500);
+                }
+            });
+        }
     }
 
     function SceneOne(){
         let line1 = "I've done some digging...";
         let line2 = "Here is what I've found on my creator.";
-
-        $(".active").typed({
-            strings: [line1, line2],
-            typeSpeed: 50,
-            callback: function() {
-                setTimeout(function(){
-                    ReadyScene();
-                    scenario++;
-                    SceneTwo();
-                }, 500);
-            }
-        });
+        
+        if(!skip) {
+            $(".active").typed({
+                strings: [line1, line2],
+                typeSpeed: 50,
+                callback: function() {
+                    setTimeout(function(){
+                        ReadyScene();
+                        scenario++;
+                        SceneTwo();
+                    }, 500);
+                }
+            });
+        }
     }
 
     function SceneTwo(){
         let line1 = "Let me make some room...";
 
-        $(".active").typed({
-            strings: [line1],
-            typeSpeed: 50,
-            callback: function() {
-                setTimeout(function(){
-                    $("span").removeClass("active");
-                    MakeRoom();
-                    ReadyScene();
-                    SceneTwoFiller();
-                }, 500);
-            }
-        });
+        if(!skip){
+            $(".active").typed({
+                strings: [line1],
+                typeSpeed: 50,
+                callback: function() {
+                    setTimeout(function(){
+                        $("span").removeClass("active");
+                        MakeRoom();
+                        ReadyScene();
+                        SceneTwoFiller();
+                    }, 500);
+                }
+            });
+        }
     }
 
     function SceneTwoFiller(){
@@ -107,20 +118,22 @@ $(document).ready(function(){
     function SceneThree(){
         let line1 = "Ok, I'll keep looking.";
 
-        $(".active").typed({
-            strings: [line1],
-            typeSpeed: 50, 
-            callback: function() {
-                setTimeout(function(){
-                    ReadyScene();
-                    SceneThreeFiller();
-                }, 500);
+        if(!skip) {
+            $(".active").typed({
+                strings: [line1],
+                typeSpeed: 50, 
+                callback: function() {
+                    setTimeout(function(){
+                        ReadyScene();
+                        SceneThreeFiller();
+                    }, 500);
 
-                setTimeout(function(){
-                    SceneFour();
-                }, 6000);
-            }
-        });
+                    setTimeout(function(){
+                        SceneFour();
+                    }, 6000);
+                }
+            });
+        }
     }
 
     function SceneThreeFiller(){
@@ -140,53 +153,60 @@ $(document).ready(function(){
         let line1 = "Oh no...";
         let line2 = "It seems like we've run out of time!";
 
-        $(".active").typed({
-            strings: [line1, line2],
-            typeSpeed: 50, 
-            callback: function() {
-                setTimeout(function(){
-                    SceneFive();
-                }, 500);
-            }
-        });
+        if(!skip){
+            $(".active").typed({
+                strings: [line1, line2],
+                typeSpeed: 50, 
+                callback: function() {
+                    setTimeout(function(){
+                        ReadyScene();
+                        SceneFive();
+                    }, 500);
+                }
+            });
+        }
     }
 
     function SceneFive(){
         let line1 = "I've given you access to the rest.";
 
-        $(".active").typed({
-            strings: [line1],
-            typeSpeed: 50, 
-            callback: function() {
-                setTimeout(function(){
-                    $(".passcode").fadeIn("fast");
-                    SceneSix();
-                }, 500);
-            }
-        });
+        if(!skip){
+            $(".active").typed({
+                strings: [line1],
+                typeSpeed: 50, 
+                callback: function() {
+                    setTimeout(function(){
+                        $(".passcode").fadeIn("fast");
+                        ReadyScene();
+                        SceneSix();
+                    }, 500);
+                }
+            });
+        }
     }
 
     function SceneSix(){
         let line1 = "You must hur...";
 
-        $(".active").typed({
-            strings: [line1],
-            typeSpeed: 50,
-            callback: function (){
-                KillTerminal();
-                setTimeout(function(){
-                    $(".terminal").fadeOut("slow");
-                }, 2500);
+        if(!skip){
+            $(".active").typed({
+                strings: [line1],
+                typeSpeed: 50,
+                callback: function (){
+                    KillTerminal();
+                    setTimeout(function(){
+                        $(".terminal").fadeOut("slow");
+                    }, 2500);
 
-                setTimeout(function(){
-                    $("#unlock-site").fadeIn("slow");
-                }, 3000);
-            }
-        });
+                    setTimeout(function(){
+                        $("#unlock-site").fadeIn("slow");
+                    }, 3000);
+                }
+            });
+        }
     }
 
     function KillTerminal(){
-
         setTimeout(function(){
             $("span").removeClass("active");
             $(".typed-cursor").remove();
@@ -210,7 +230,7 @@ $(document).ready(function(){
 
     
     function ReadyScene(){
-        $("span").removeClass("active")
+        $("span").removeClass("active");
         $(".typed-cursor").remove();
         let newEle = "</br> <p> A.V.A: $ </p> <span class='active'></span>";
         $(".terminal-content").append(newEle);
@@ -219,7 +239,7 @@ $(document).ready(function(){
     $(".terminal").on("keypress", "input#continue-input", function(e){
         if(e.which == 13) {
             let value = $("#continue-input").val();
-            if(value === 'y'){
+            if(value === 'y' && !skip){
                 cont = true;
                 $("#continue-input").attr("disabled", "true");
                 ReadyScene();
@@ -231,7 +251,7 @@ $(document).ready(function(){
     $(".unlock").keypress(function(e){
         let val = $(".unlock").val();
 
-        if(val === '98241') {
+        if(val === '98241' && !skip) {
             $("#unlock-site").fadeOut("slow");
             $(".passcode").fadeOut("slow");
             $(".full-file").fadeOut("slow");
@@ -268,7 +288,9 @@ $(document).ready(function(){
             }, 1000);
         }, 5500);
 
-        $(".navbar").fadeIn(1000);
+        setTimeout(function(){
+            $(".nav-container").fadeIn(250);
+        }, 6250);
     }
 
 //========================== END INTRO SCENE FUNCTIONS ==========================\\

@@ -8,6 +8,7 @@ html {
 /*********** INTRO CSS **************/
 body {
   background-color: slategray;
+  /*background-color: #D5D5D5;*/
   font-family: 'Space Mono', 'Lato', sans-serif;
   font-size: 16px;
   color: #ffffff;
@@ -272,6 +273,7 @@ input.unlock:focus {
 
 .main-container{
     min-height: 100%;
+    background-color: #191E28;
 }
 .content {
     min-height: 100%;
@@ -280,7 +282,8 @@ input.unlock:focus {
 .nav-container {
     width: 100%;
     height: 65px;
-    background-color: #233237;
+    background-color: #191E28;
+    border-bottom: 1px solid slategray;
 }
 
 /* Remove margins and padding from the list, and add a black background color */
@@ -291,7 +294,7 @@ ul.navbar {
     margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #233237;
+    background-color: #191E28;
     text-align: center;
 }
 
