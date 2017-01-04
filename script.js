@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+//========================== INTRO SCENE FUNCTIONS ==========================\\
     $(".card").hide();
     $(".full-file").hide();
     $(".passcode").hide();
@@ -8,6 +10,8 @@ $(document).ready(function(){
     $("#welcome-fr").hide();
     $("#welcome-ma").hide();
     $(".welcome").hide();
+    $(".main-container").hide();
+    $(".navbar").hide();
 
     var scenario = 0;
     var cont = false;
@@ -23,6 +27,7 @@ $(document).ready(function(){
         $(".passcode").fadeOut(500);
         $(".skip").fadeOut(500);
         ShowWelcome();
+        $(".card").hide();
     }
 
     $(".skip").click(function(){
@@ -113,7 +118,7 @@ $(document).ready(function(){
 
                 setTimeout(function(){
                     SceneFour();
-                }, 7000)
+                }, 6000);
             }
         });
     }
@@ -183,7 +188,7 @@ $(document).ready(function(){
     function KillTerminal(){
 
         setTimeout(function(){
-            $("span").removeClass("active")
+            $("span").removeClass("active");
             $(".typed-cursor").remove();
             let newEle = "</br> <p> SUCCESS: The process with PID 47120 has been terminated. </p>";
             $(".terminal-content").append(newEle);
@@ -242,23 +247,36 @@ $(document).ready(function(){
     function ShowWelcome(){
         $(".welcome").show();
         setTimeout(function(){
-            $("#welcome-en").fadeIn(1000);
+            $("#welcome-fr").fadeIn(1000);
         }, 500);
         setTimeout(function(){
-            $("#welcome-en").fadeOut(1000);
+            $("#welcome-fr").fadeOut(1000);
         }, 1500);
         setTimeout(function(){
-            $("#welcome-fr").fadeIn(1000);
+            $("#welcome-ma").fadeIn(1000);
         }, 2500);
         setTimeout(function(){
-            $("#welcome-fr").fadeOut(1000);
+            $("#welcome-ma").fadeOut(1000);
         }, 3500);
         setTimeout(function(){
-            $("#welcome-ma").fadeIn(1000);
+            $("#welcome-en").fadeIn(1000);
         }, 4500);
         setTimeout(function(){
-            $("#welcome-ma").fadeOut(1000);
+            $(".main-container").show();
+            $('html, body').animate({
+                scrollTop: $("#about-me").offset().top
+            }, 1000);
         }, 5500);
+
+        $(".navbar").fadeIn(1000);
     }
+
+//========================== END INTRO SCENE FUNCTIONS ==========================\\
+
+
+//========================== SCROLLING FUNCTION ==========================\\
+
+//========================== SCROLLING FUNCTION ==========================\\
+
 
 });
