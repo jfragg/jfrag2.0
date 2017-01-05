@@ -200,13 +200,6 @@ input.unlock:focus {
     position: relative;
 }
 
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 1.2s infinite;
-    -moz-animation: blink 1.2s infinite;
-    animation: blink 1.2s infinite;
-}
-
 .passcode {
     background-color: black;
     width: 110px;
@@ -237,6 +230,22 @@ input.unlock:focus {
     position: absolute;
 }
 
+.cursor {
+    font-size: 24px;
+    margin-bottom: 4px;
+    opacity: 1;
+    -webkit-animation: blink 1.2s infinite;
+    -moz-animation: blink 1.2s infinite;
+    animation: blink 1.2s infinite;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 1.2s infinite;
+    -moz-animation: blink 1.2s infinite;
+    animation: blink 1.2s infinite;
+}
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
@@ -253,30 +262,15 @@ input.unlock:focus {
     100% { opacity:1; }
 }
 
-/*::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track-piece {
-    -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,0.5); 
-    box-shadow: inset 0 0 6px rgba(200,200,200,0.5); 
-    border-radius: 10px;
-} */
-
 /*********** INTRO CSS **************/
 
 .main-container{
-    min-height: 100%;
+    height: 100%;
     background-color: #191E28;
 }
 .content {
     min-height: 100%;
+    padding-top: 100px;
 }
 
 .nav-container {
@@ -284,6 +278,11 @@ input.unlock:focus {
     height: 65px;
     background-color: #191E28;
     border-bottom: 1px solid slategray;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
 }
 
 /* Remove margins and padding from the list, and add a black background color */
@@ -312,9 +311,28 @@ ul.navbar li a {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    transition: 0.3s;
 }
 
 /* Change background color of links on hover */
 ul.navbar li:hover {
-    border-bottom: 2px #EAC67A solid;
+    /*border-bottom: 2px #EAC67A solid;*/
+}
+
+ul.navbar li a:hover {
+    color: #FBA100;
+}
+
+h4 b {
+    /*color: #EAC67A;*/
+    color: #FBA100;
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+      .container {
+         text-align: center; 
+      }
 }

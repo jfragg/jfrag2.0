@@ -12,6 +12,7 @@ $(document).ready(function(){
     $(".welcome").hide();
     $(".main-container").hide();
     $(".nav-container").hide();
+    $(".row").hide();
 
     var scenario = 0;
     var cont = false;
@@ -266,7 +267,7 @@ $(document).ready(function(){
 
     function ShowWelcome(){
         $(".welcome").show();
-        setTimeout(function(){
+        /*setTimeout(function(){
             $("#welcome-fr").fadeIn(1000);
         }, 500);
         setTimeout(function(){
@@ -286,19 +287,40 @@ $(document).ready(function(){
             $('html, body').animate({
                 scrollTop: $("#about-me").offset().top
             }, 1000);
-        }, 5500);
+        }, 5500);*/
+
+        //only the welcome statement
+        setTimeout(function(){
+            $("#welcome-en").fadeIn(1000);
+        }, 500);
+        setTimeout(function(){
+            $(".main-container").show();
+            $('html, body').animate({
+                scrollTop: $("#about-me").offset().top
+            }, 1000);
+        }, 1500);
+
+        /*setTimeout(function(){
+            $(".nav-container").fadeIn(250);
+        }, 6250);*/
 
         setTimeout(function(){
-            $(".nav-container").fadeIn(250);
-        }, 6250);
+            $(".nav-container").fadeIn(750);
+        }, 2250);
+
+        setTimeout(function(){
+            $(".row").fadeIn(750);
+        }, 2500);
     }
 
 //========================== END INTRO SCENE FUNCTIONS ==========================\\
 
 
-//========================== SCROLLING FUNCTION ==========================\\
+//========================== CONTENT FUNCTION ==========================\\
 
-//========================== SCROLLING FUNCTION ==========================\\
+    
+
+//========================== CONTENT FUNCTION ==========================\\
 
 
 });
