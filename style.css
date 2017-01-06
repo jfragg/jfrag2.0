@@ -317,7 +317,6 @@ ul.navbar li a:hover {
 
 .main-container{
     background-color: #191E28;
-    border: 2px solid limegreen;
 }
 
 .content {
@@ -328,7 +327,6 @@ ul.navbar li a:hover {
 
 #about-me {
     display: flex;
-    border: 2px solid crimson;
 }
 
 .title {
