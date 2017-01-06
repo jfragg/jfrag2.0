@@ -297,7 +297,7 @@ $(document).ready(function(){
             $(".main-container").show();
             $('html, body').animate({
                 scrollTop: $("#about-me").offset().top
-            }, 1000);
+            }, 1500);
         }, 1500);
 
         /*setTimeout(function(){
