@@ -357,7 +357,25 @@ h4 b {
 
 
 #projects {
-    background-color: slategray;
+    background-color: #191E28;
+    color: #FBA100;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#project-holder {
+    display: flex;
+    margin-top: 10vh;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-card {
+    background-color: #f3f3f3;
+    height: 60vh;
+    width: 40vh;
 }
 
 
