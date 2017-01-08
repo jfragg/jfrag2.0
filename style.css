@@ -321,7 +321,7 @@ ul.navbar li a:hover {
 
 .content {
     min-height: 100vh;
-    padding-top: 7.5vh;
+    padding-top: 10vh;
 }
 
 
@@ -368,7 +368,8 @@ h4 b {
 #project-holder {
     display: flex;
     margin-top: 10vh;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-flow: row wrap;
     width: 100%;
 }
 
