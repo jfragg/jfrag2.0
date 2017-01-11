@@ -379,6 +379,12 @@ h4 b {
     width: 40vh;
 }
 
+#games {
+    background-image: url("images/play.jpg");
+    background-size: cover;
+
+}
+
 
 /* TEST STUFF */
 
