@@ -387,7 +387,12 @@ h4 b {
     flex: 1;
     display: flex;
     flex-direction: column;
+    font-size: 10px;
+    line-height: 16px;
+}
 
+.info-container p {
+    padding: 0 5%;
 }
 
 #top-info {
@@ -411,6 +416,11 @@ h4 b {
     border: 2px solid white;
     flex: 1;
     margin: 5px;
+}
+
+#topright p { 
+    font-size: 14px;
+    line-height: 20px;
 }
 
 #bottom-info {
