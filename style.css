@@ -9,7 +9,7 @@ html {
 body {
   background-color: slategray;
   /*background-color: #D5D5D5;*/
-  font-family: 'Space Mono', 'Lato', sans-serif;
+  font-family: 'Sarala', 'Space Mono', 'Lato', sans-serif;
   font-size: 16px;
   color: #ffffff;
   line-height: 25px;
@@ -21,6 +21,7 @@ body {
     min-width: 100%;
     margin: auto;
     display: inline-flex;
+    font-family: 'Space Mono', 'Lato', sans-serif;
 }
 
 .terminal img {
@@ -267,8 +268,9 @@ input.unlock:focus {
 .nav-container {
     width: 100%;
     height: 65px;
-    background-color: #191E28;
+    background-color: #252839;
     border-bottom: 1px solid slategray;
+    /*font-family: 'Sarala', 'Space Mono', 'Lato', sans-serif;*/
     z-index: 10;
     position: fixed;
     top: 0;
@@ -284,7 +286,7 @@ ul.navbar {
     margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #191E28;
+    background-color: #252839;
     text-align: center;
 }
 
@@ -311,12 +313,14 @@ ul.navbar li:hover {
 }
 
 ul.navbar li a:hover {
-    color: #FBA100;
+    /*color: #FBA100; DARKER ORANGE*/
+    color: #FF8D1C;
 }
 
 
 .main-container{
-    background-color: #191E28;
+    /*background-color: #191E28; DARKER PURPLE*/
+    background-color: #252839;
 }
 
 .content {
@@ -332,32 +336,33 @@ ul.navbar li a:hover {
 .title {
     flex: 1;
     padding-left: 40px;
-    line-height: 40px;
+    line-height: 60px;
+    font-size: 20px;
 }
 
-h4 b {
+h2 b {
     /*color: #EAC67A;*/
-    color: #FBA100;
+    /*color: #FBA100;*/
+    color: #FF8D1C;
+    font-size: 30px
 }
 
-.spy-case {
-    background-image: url("images/agent-me-copy.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 600px;
-    flex: 1.5;
-    opacity: 0.8;
-
-   /* -webkit-transform:rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);*/
+.top-info {
+    flex: 1;
 }
 
+#prof-pic {
+    background-image: url("images/myface.png");
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #00D8BF;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
 
 #projects {
-    background-color: #191E28;
+    background-color: #252839;
     color: #FBA100;
     display: flex;
     justify-content: space-between;
@@ -385,24 +390,42 @@ h4 b {
 
 }
 
-
 /* TEST STUFF */
 
 .info-container {
-    /*border: 2px solid white;*/
+    border: 2px solid #f2b632;
     flex: 1;
     display: flex;
     flex-direction: column;
     font-size: 10px;
     line-height: 16px;
+    
+}
+
+.colour-tester {
+    flex: 1;
 }
 
 .info-container p {
     padding: 0 5%;
 }
 
-#top-info {
-    /*border: 2px solid red;*/
+/*.spy-case {
+    background-image: url("images/agent-me-copy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    flex: 1.5;
+    opacity: 0.8;
+
+   /* -webkit-transform:rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}*/
+
+/*#top-info {
     flex: 1;
     display: flex;
 }
@@ -430,7 +453,6 @@ h4 b {
 }
 
 #bottom-info {
-    /*border: 2px solid mediumaquamarine;*/
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -440,7 +462,7 @@ h4 b {
     border: 2px solid white;
     margin: 10px;
     flex: 1;
-}
+}*/
 
 /* TEST STUFF */
 
