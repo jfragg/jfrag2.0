@@ -7,7 +7,7 @@ html {
 
 /*********** INTRO CSS **************/
 body {
-  background-color: slategray;
+  background-color: #456990;
   /*background-color: #D5D5D5;*/
   font-family: 'Sarala', 'Space Mono', 'Lato', sans-serif;
   font-size: 16px;
@@ -268,7 +268,8 @@ input.unlock:focus {
 .nav-container {
     width: 100%;
     height: 65px;
-    background-color: #252839;
+    /*background-color: #252839;*/
+    background-color: #456990;
     border-bottom: 1px solid slategray;
     /*font-family: 'Sarala', 'Space Mono', 'Lato', sans-serif;*/
     z-index: 10;
@@ -286,7 +287,8 @@ ul.navbar {
     margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #252839;
+    /*background-color: #252839; purple*/
+    background-color: #456990;
     text-align: center;
 }
 
@@ -314,13 +316,16 @@ ul.navbar li:hover {
 
 ul.navbar li a:hover {
     /*color: #FBA100; DARKER ORANGE*/
-    color: #FF8D1C;
+    /*color: #FF8D1C; ORANGE */
+    color: #EF767A;
 }
 
 
 .main-container{
     /*background-color: #191E28; DARKER PURPLE*/
-    background-color: #252839;
+    /*background-color: #252839; PURPLE */
+    background-color: #f2f2f2;
+    color: black;
 }
 
 .content {
@@ -331,6 +336,50 @@ ul.navbar li a:hover {
 
 #about-me {
     display: flex;
+    flex-direction: column;
+}
+
+.icon-container {
+    display: flex;
+    flex: 1;
+}
+
+.icons {
+    flex: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2%;
+}
+
+.icons h5 {
+    color: #36454f;
+}
+
+.icons p {
+    color: #36454f;
+    font-size: 14px;
+}
+
+.icons:first-child {
+    color: #EF767A;
+}
+
+.icons:nth-child(2) {
+    color: #456990;
+}
+
+.icons:nth-child(3){
+    color: #49BEAA;
+}
+
+.info-container {
+    border: 2px solid #f2b632;
+    flex: 1;
+    display: flex;
+}
+
+.info-container p {
+    padding: 0 5%;
 }
 
 .title {
@@ -347,19 +396,6 @@ h2 b {
     font-size: 30px
 }
 
-.top-info {
-    flex: 1;
-}
-
-#prof-pic {
-    background-image: url("images/myface.png");
-    background-size: cover;
-    border-radius: 50%;
-    border: 2px solid #00D8BF;
-    width: 50%;
-    height: 50%;
-    margin: auto;
-}
 
 #projects {
     background-color: #252839;
@@ -391,24 +427,6 @@ h2 b {
 }
 
 /* TEST STUFF */
-
-.info-container {
-    border: 2px solid #f2b632;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    font-size: 10px;
-    line-height: 16px;
-    
-}
-
-.colour-tester {
-    flex: 1;
-}
-
-.info-container p {
-    padding: 0 5%;
-}
 
 /*.spy-case {
     background-image: url("images/agent-me-copy.png");
