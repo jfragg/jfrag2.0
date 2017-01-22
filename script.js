@@ -318,7 +318,18 @@ $(document).ready(function(){
 
 //========================== CONTENT FUNCTION ==========================\\
 
-    
+    $(".proj-text").hide();
+    $(".proj-obj").mouseenter(function(){
+        /*$(".proj-text").slideDown(500);*/
+        var $this = $(this);
+        $(this).find('.proj-text').slideDown(750);
+    });
+    $(".proj-obj").mouseleave(function(){
+        /*$(".proj-text").slideUp(500);*/
+        var $this = $(this);
+        $(this).find('.proj-text').slideUp(750);
+    });
+
 
 //========================== CONTENT FUNCTION ==========================\\
 

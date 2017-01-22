@@ -462,33 +462,25 @@ ul.navbar li a:hover {
     background-color: white;
     box-shadow: 0 0 20px lightgray;
     margin: 10px 10px 10px 5px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #ss {
     background-image: url("images/space-game.png");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.proj-obj:hover #ss-name {
-    height: 85%;
+#hw3 {
+    background-image: url("images/hw3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.proj-obj:hover .proj-text {
-    visibility: visible;
-    transition-delay: 1s;
-}
-
-.proj-obj:hover #hw3-name {
-    height: 85%;
-}
-
-.proj-obj:hover #mc-name {
-    height: 85%;
-}
-
-.proj-obj:hover #sort-name {
-    height: 85%;
+#mc {
+    background-image: url("images/memory-game.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .project-name {
@@ -502,30 +494,24 @@ ul.navbar li a:hover {
 }
 
 .proj-text {
-    visibility: hidden;
     padding: 6px;
     font-size: 12px;
-    transition: ease-in 0.5s;
 }
 
 #ss-name {
     background-color: #49BEAA;
-    transition: height ease-in-out 1s;
 }
 
 #hw3-name {
     background-color: #EF767A;
-    transition: height ease-in-out 1s;
 }
 
 #mc-name {
     background-color: #A5D3FF;
-    transition: height ease-in-out 1s;
 }
 
 #sort-name {
     background-color: #FFB44C;
-    transition: height ease-in-out 1s;
 }
 
 @media only screen and (max-width: 401px) {
