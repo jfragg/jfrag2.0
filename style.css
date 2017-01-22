@@ -483,6 +483,12 @@ ul.navbar li a:hover {
     background-repeat: no-repeat;
 }
 
+#sort {
+    background-image: url("images/sorted-assmt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .project-name {
     height: 15%;
     color: white;
