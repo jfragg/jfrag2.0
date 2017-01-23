@@ -300,10 +300,6 @@ $(document).ready(function(){
             }, 1500);
         }, 1500);
 
-        /*setTimeout(function(){
-            $(".nav-container").fadeIn(250);
-        }, 6250);*/
-
         setTimeout(function(){
             $(".nav-container").fadeIn(750);
         }, 2250);
@@ -320,14 +316,12 @@ $(document).ready(function(){
 
     $(".proj-text").hide();
     $(".proj-obj").mouseenter(function(){
-        /*$(".proj-text").slideDown(500);*/
         var $this = $(this);
-        $(this).find('.proj-text').slideDown(750);
+        $(this).find('.proj-text').slideDown(600);
     });
     $(".proj-obj").mouseleave(function(){
-        /*$(".proj-text").slideUp(500);*/
         var $this = $(this);
-        $(this).find('.proj-text').slideUp(750);
+        $(this).find('.proj-text').slideUp(600);
     });
 
 

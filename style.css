@@ -469,24 +469,28 @@ ul.navbar li a:hover {
     background-image: url("images/space-game.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-bottom: 4px solid #49BEAA;
 }
 
 #hw3 {
     background-image: url("images/hw3.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-bottom: 4px solid #EF767A;
 }
 
 #mc {
     background-image: url("images/memory-game.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-bottom: 4px solid #A5D3FF;
 }
 
 #sort {
     background-image: url("images/sorted-assmt.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-bottom: 4px solid #FFB44C;
 }
 
 .project-name {
