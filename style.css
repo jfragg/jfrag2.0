@@ -468,6 +468,16 @@ ul.navbar li a:hover {
     vertical-align: middle;
 }
 
+.move-left:hover {
+    -webkit-animation: pulse 2s linear infinite;
+    animation: pulse 2s linear infinite;
+}
+
+.move-right {
+    flex: 1;
+    text-align: center;
+}
+
 .move-right:before {
     content: '';
     display: inline-block;
@@ -475,9 +485,9 @@ ul.navbar li a:hover {
     vertical-align: middle;
 }
 
-.move-right {
-    flex: 1;
-    text-align: center;
+.move-right:hover {
+    -webkit-animation: pulse 2s linear infinite;
+    animation: pulse 2s linear infinite;
 }
 
 #projects {
@@ -565,4 +575,43 @@ ul.navbar li a:hover {
 
 @media only screen and (max-height: 450px) {
 
+}
+
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
