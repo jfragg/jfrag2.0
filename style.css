@@ -449,11 +449,42 @@ ul.navbar li a:hover {
     font-size: 16px;
 }
 
+.proj-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 6;
+}
+
+.move-left {
+    flex: 1;
+    text-align: center;
+}
+
+.move-left:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.move-right:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.move-right {
+    flex: 1;
+    text-align: center;
+}
+
 #projects {
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /*flex-wrap: wrap;*/
+    justify-content: center; 
 }
 
 .proj-obj {
