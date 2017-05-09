@@ -453,12 +453,24 @@ ul.navbar li a:hover {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .dev-logo {
     width: 12.5%;
-    height: 50%;
+    height: 60%;
+}
+
+#ang-logo {
+    background-image: url("images/dev-icons/angularjs-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#emb-logo {
+    background-image: url("images/dev-icons/ember-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #cp-logo {
@@ -509,6 +521,41 @@ ul.navbar li a:hover {
     background-position: center;
 }
 
+#git-logo {
+    background-image: url("images/dev-icons/git-logo2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#unity-logo {
+    background-image: url("images/dev-icons/unity-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#vs-logo {
+    background-image: url("images/dev-icons/vs-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#as-logo {
+    background-image: url("images/dev-icons/as-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#xcode-logo {
+    background-image: url("images/dev-icons/Xcode-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #languages {
     display: flex;
     justify-content: space-around;
@@ -516,12 +563,12 @@ ul.navbar li a:hover {
 
 #technologies {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #tools {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .proj-container {
