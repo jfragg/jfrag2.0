@@ -449,6 +449,81 @@ ul.navbar li a:hover {
     font-size: 16px;
 }
 
+.skill-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dev-logo {
+    width: 12.5%;
+    height: 50%;
+}
+
+#cp-logo {
+    background-image: url("images/dev-icons/cp-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#cs-logo {
+    background-image: url("images/dev-icons/cs-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#py-logo {
+    background-image: url("images/dev-icons/Python-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#java-logo {
+    background-image: url("images/dev-icons/java-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#js-logo {
+    background-image: url("images/dev-icons/js-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#njs-logo {
+    background-image: url("images/dev-icons/nodejs-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sql-logo {
+    background-image: url("images/dev-icons/sql-logo2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#languages {
+    display: flex;
+    justify-content: space-around;
+}
+
+#technologies {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tools {
+    display: flex;
+    justify-content: space-around;
+}
+
 .proj-container {
     display: flex;
     justify-content: center;
