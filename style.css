@@ -467,7 +467,7 @@ ul.navbar li a:hover {
 }
 
 .skill-title {
-    height: 25%;
+    height: 20%;
 }
 
 .skill-container {
@@ -495,21 +495,21 @@ ul.navbar li a:hover {
 #languages {
     display: flex;
     justify-content: center;
-    height: 33%;
+    height: 25%;
     flex-wrap: wrap;
 }
 
 #technologies {
     display: flex;
     justify-content: center;
-    height: 33%;
+    height: 25%;
     flex-wrap: wrap;
 }
 
 #tools {
     display: flex;
     justify-content: center;
-    height: 33%;
+    height: 25%;
     flex-wrap: wrap;
 }
 
