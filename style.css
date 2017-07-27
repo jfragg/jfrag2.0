@@ -53,7 +53,7 @@ body {
     overflow: auto;
 }
 
-.card {
+#intro-card {
     background-color: white;
     width: 400px;
     height: 450px;
@@ -63,6 +63,14 @@ body {
     border-radius: 2%;
     box-shadow: 0px 0px 50px #233237;
     z-index: -5;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    border-radius: 2%;
+    box-shadow: 0px 0px 25px gray;
 }
 
 .full-file {
@@ -140,9 +148,47 @@ body {
     font-size: 10px;
 }
 
+/*INTRO CARD CSS START*/
+#intro-card table tr {
+    line-height: 0px;
+}
+
+#intro-card table td {
+    font-size: 10px;
+    border-radius: 0px;
+}
+
+#intro-card table td:nth-child(2) {
+    border-left: 3px solid #984B43;
+    /* rusty red: #984B43 */
+    /* neon green: #84ed4b */
+}
+
+#intro-card table td.highlighted {
+    background-color: #984B43;
+    color: white;
+}
+
+#intro-card table .line-number {
+    font-size: 11px;
+}
+
+#intro-card table .normal {
+    color: darkgray;
+}
+
+#intro-card table .personal-info {
+    color: #0e3a7c;
+}
+
+#intro-card table .darken {
+    color: black;
+    font-size: 10px;
+}
+/*INTRO CARD CSS END*/
+
 .info-highlight {
     background-color:  #fff7f9;
-    /*e1e6ef*/
 }
 
 input[type=text]#continue-input {
@@ -628,6 +674,12 @@ ul.navbar li a:hover {
 #sort-name {
     background-color: #FFB44C;
 }
+
+/*contact css*/
+
+
+
+/*end contact css*/
 
 @media only screen and (max-width: 401px) {
 

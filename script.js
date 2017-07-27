@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 //========================== INTRO SCENE FUNCTIONS ==========================\\
-    $(".card").hide();
+    $("#intro-card").hide();
     $(".full-file").hide();
     $(".passcode").hide();
     $("#unlock-site").hide();
@@ -26,8 +26,8 @@ $(document).ready(function(){
         $(".terminal").hide();
         //$(".full-file").fadeOut(500);
         $(".full-file").hide();
-        //$(".card").fadeOut(500);
-        $(".card").hide();
+        //$("#intro-card").fadeOut(500);
+        $("#intro-card").hide();
         //$(".passcode").fadeOut(500);
         $(".passcode").hide();
         //$(".skip").fadeOut(500);
@@ -220,12 +220,12 @@ $(document).ready(function(){
         $(".terminal").delay(100).animate({
             right: '300px'
         }, "slow", function() {
-            $(".card").delay(250).fadeIn("slow");
+            $("#intro-card").delay(250).fadeIn("slow");
         });
     }
 
     function CleanUpJSON(){
-        $(".card").delay(250).fadeOut("slow");
+        $("#intro-card").delay(250).fadeOut("slow");
         $(".full-file").delay(750).fadeIn("slow");
     }
 
