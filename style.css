@@ -677,7 +677,27 @@ ul.navbar li a:hover {
 
 /*contact css*/
 
+#content-card {
+    margin: auto;
+}
 
+.content-container {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    min-height: 70vh;
+    border: 1px solid green;
+}
+
+.cc-right {
+    flex: 1;
+    border: 1px solid red;
+}
+
+.cc-left {
+    flex: 2;
+    border: 1px solid black;
+}
 
 /*end contact css*/
 
